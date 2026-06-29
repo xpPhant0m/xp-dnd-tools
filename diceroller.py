@@ -8,7 +8,7 @@ def main():
 
     if cmd.startswith('statgen'): #eg statgen6
         for i in range(int(cmd[7:])):
-            d6 = [random.randint(1,6) for _ in range(4)]
+            d6 = {random.randint(1,6) for _ in range(4)}
             d6.remove(min(d6))
             print(sum(d6))
 
